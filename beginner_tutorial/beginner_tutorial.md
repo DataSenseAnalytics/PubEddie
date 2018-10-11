@@ -84,4 +84,6 @@ After module finishes running, 10 sample rows (if the number of rows of the fina
 
 ![Run_module](./Run_module.gif)
 
+If you run into bugs or need support or wish to make feature requests, please raise an issue here https://github.com/DataSenseAnalytics/PubEddie/issues 
+
 That's it to get started. Please review the User Guide for more detailed description of EDDiE's features and functionality.
