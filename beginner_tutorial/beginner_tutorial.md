@@ -1,6 +1,6 @@
-# Beginner Tutorial
+# Get Started
 
-Welcome to the beginner tutorial for first time EDDiE users! This guide takes you 10 minutes to introduce the basic concepts of EDDiE and helps you get started.
+Welcome to the Get Started Guide for first time EDDiE users! This guide takes you 10 minutes to introduce the basic concepts of EDDiE and helps you get started.
 
 ## Step 1 - Download CSV
 
@@ -32,10 +32,10 @@ This csv file is separated by comma and with a header in the first row. To apply
 
 ## Step 4 - Discover your data in Notebook
 
-After module creation, let's move to right-side Notebook area. Firstly, to use EDDiE's notebook, you can see some notebook-level operations on the top, such as "Save". You can click a specific cell, and then **right-click** the cell to access cell-level functions and refer to the corresponding short-cuts. For example, we will add a new cell in the notebook:
+After module creation, let's move to right-side Notebook area. Firstly, to use EDDiE's notebook, you can see the **toolbar** on the top. You can also left-click a specific cell, and then **right-click** the cell to access the cell-level functions and refer to the corresponding **short-cuts**. For example, we will add a new cell in the notebook:
 ![NB_Usage](./NB_Usage.gif)
 
-Pass module FQN `proj.newFile.input` to `df()` function (you can also right click the module in the graph view and Copy the full FQN Name to the clipboard), and run this cell. The result of this module is returned to Spark Dataframe `d`. Now feel free to run a few simple commands to get a preliminary understanding of data structure.
+Leverage the `Copy Name` functionality to pass module FQN `proj.newFile.input` to `df()` function, and run this cell. The result of this module is returned to Spark Dataframe `d`. Now feel free to run a few simple commands to get a preliminary understanding of data structure.
 
 ![Replace_FQN](./Replace_notebook_module_FQN.gif)
 
@@ -65,22 +65,22 @@ In the output, you can see the bad applicant rate declines as age grows.
 
 ## Step 6 - Create another module from Notebook
 
-Although Notebook is a good place for interactive and experimental data science, it is not quite readable and maintainable in production once project gets big and complicated. EDDiE allows you to use chunks of ad-hoc code in Notebook to generate modules and build a scalable and deployable data pipeline easily.
+Although Notebook is a good place for interactive and experimental data science, it is not quite readable and maintainable in production once project gets big and complicated. EDDiE allows you to use chunks of ad-hoc code in Notebook to directly generate modules from a cell and build a scalable and deployable data pipeline easily.
 
-To create another module, click on `Add Module`, choose `Module` type, select first module `proj.newFile.input` as dependency and click on `Create`.
+To create another module, right-click a specific notebook cell and select `Generate module`. Enter a module name, and you can see the main logic has been copied to the left-hand side as a new module.
 
-Then copy the code from Notebook to code block in Module Editor Form, modify input and output dataframe name accordingly and click on `Submit`. A new module appears in dependency graph now.
+Then select the correct dataset (`proj.newFile.input`) as the dependency and modify the corresponding variable in the code, and click on the save button. The new module appears correctly in the dependency graph now.
 
 ![Create_module_from_notebook](./Create_module_from_notebook.gif)
 
 ## Step 7 - Run your modules
 
 Once module is created, let's check whether the module result is as expected. There are three ways to run a module in EDDiE
-1. Click on the green button `Run Module` in Module Editor Form
+1. Click on the button `Run Module` in Module Editor Form
 2. Right click module chip in dependency graph and click on `Run Module`
 3. Right click module name in tree view and click on `Run Module`
 
-After module finishes running, 10 sample rows (if the number of rows of the final output exceeds 10) are returned and module chip turns from red to green in dependency graph. If you want to get the complete result, just click on `Export to CSV` next to `Run Module` and CSV file will be downloaded to your laptop.
+After module finishes running, 10 sample rows (if the number of rows of the final output exceeds 10) are returned and module chip's color becomes darker in dependency graph. If you want to get the complete result, just click on `Export to CSV` next to `Run Module` and CSV file will be downloaded to your laptop.
 
 ![Run_module](./Run_module.gif)
 
